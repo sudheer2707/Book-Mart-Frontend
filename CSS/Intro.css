@@ -1,0 +1,151 @@
+/* 🌈 Color & Font Setup */
+:root {
+  --bg-gradient: linear-gradient(135deg, #4b6cb7, #182848);
+  --accent: #f5b301;
+  --text: #ffffff;
+  --font: 'Poppins', sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Setup */
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-gradient);
+  font-family: var(--font);
+  overflow: hidden;
+  position: relative;
+  color: var(--text);
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+.intro-container {
+  text-align: center;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* ---------- LOGO & BRAND ---------- */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideDown 1.2s ease forwards;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 15px;
+  animation: bounce 2.8s ease infinite;
+}
+
+.brand-name {
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.dot {
+  color: var(--accent);
+}
+
+/* ---------- TAGLINE ---------- */
+.tagline {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-top: 10px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  animation: fadeIn 1.8s 0.8s ease forwards;
+}
+
+/* ---------- LOADING BAR ---------- */
+.loading-bar {
+  width: 200px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  margin: 25px auto;
+  overflow: hidden;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  animation: loading 3s ease forwards;
+}
+
+/* ---------- FADE SCREEN (transition overlay) ---------- */
+.fade-screen {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+/* === New & Old Books Bar === */
+.book-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0e2238; /* same tone as header/nav */
+  color: #f4efe6;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5px;
+  height: 55px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.book-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.book-option:hover {
+  background-color: #1b3b5f;
+  color: #e8d6a5;
+}
+
+.new-books {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes loading {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
