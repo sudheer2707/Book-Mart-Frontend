@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookMart | Sell Your Book</title>
+  <link rel="stylesheet" href="/CSS/Sell.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- 🔹 HEADER -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="/IMAGES/Bookmart logo.png" alt="BookMart Logo" class="logo" />
+      <h1>BookMart</h1>
+    </div>
+    <div class="header-right">
+      <a href="/HTML/Index.html" class="home-link"><i class="fas fa-home"></i> Home</a>
+    </div>
+  </header>
+
+  <!-- 🔹 PAGE TITLE -->
+  <section class="page-title">
+    <h2>Sell Your Book</h2>
+    <p>Have a book to sell? Fill in the details below and we’ll list it for you!</p>
+  </section>
+
+  <!-- 🔹 SELL FORM -->
+  <section class="sell-form-section">
+    <form class="sell-form">
+      <label for="bookName">Book Title:</label>
+      <input type="text" id="bookName" placeholder="Enter book title" required />
+
+      <label for="author">Author:</label>
+      <input type="text" id="author" placeholder="Enter author's name" required />
+
+      <label for="Original price">Original Price(₹):</label>
+      <input type="number" id="price" placeholder="Enter price" required />
+
+       <label for="Expected price">Expected Price(₹):</label>
+      <input type="number" id="price" placeholder="Enter price" required />
+
+      <label for="condition">Condition:</label>
+      <select id="condition" required>
+        <option value="">Select condition</option>
+        <option value="Like New">Like New</option>
+        <option value="Good">Good</option>
+        <option value="Fair">Fair</option>
+        <option value="Bad">Bad</option>
+      </select>
+
+     <!-- Replace your current upload field with this -->
+<label for="bookImages">Upload Book Images (max 4):</label>
+<input type="file" id="bookImage" accept="image/*" multiple required />
+
+<!-- Add preview container (optional but useful) -->
+<div id="imagePreview" class="image-preview"></div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </section>
+
+  <script src="/JAVASCRIPT/Sell.js"></script>
+
+
+  <!-- 🔹 FOOTER -->
+  <footer class="footer">
+    <p>© 2025 BookMart. Buy New. Sell Old. Read Smart.</p>
+  </footer>
+
+</body>
+</html>

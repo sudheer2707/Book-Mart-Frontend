@@ -112,41 +112,185 @@ body {
 .profile i:hover {
   color: #d8c9a5;
 }
-/* === NEW & OLD BOOKS SECTION (CLEAN WHITE THEME) === */
-.books-bar {
+/* ---------- NEW & OLD BOOKS SECTION ---------- */
+.books-section {
   display: flex;
   width: 100%;
-  height: 65px;
-  background-color: #ffffff;
-  color: #000000;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  height: 100vh; /* Full screen height */
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.books-section {
+.new-books, .old-books {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.6s ease;
   cursor: pointer;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
   position: relative;
-  transition: all 0.3s ease-in-out;
-  border-right: 1px solid rgba(0, 0, 0, 0.08); /* subtle section divider */
 }
 
-.books-section:last-child {
-  border-right: none; /* remove border on last section */
+.old-books {
+  border-right: none;
 }
 
-/* Hover effect: soft highlight and text emphasis */
-.books-section:hover {
-  background-color: #f5f5f5;
-  color: #222222;
-  box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.05);
-  transform: translateY(-1px);
+.new-books h2, .old-books h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #000;
+  transition: all 0.4s ease;
 }
+
+/* 🪄 Hover animation */
+.new-books:hover, .old-books:hover {
+  background-color: lightblue;
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Floating feel */
+  z-index: 10;
+}
+
+/* 🔤 Text animation */
+.new-books:hover h2, .old-books:hover h2 {
+  color: #2c3e50;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✋ Cursor pointer */
+.new-books:hover, .old-books:hover {
+  cursor: pointer;
+}
+.books-section {
+  background-image: url("/IMAGES/Openbook.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.new-books::after,
+.old-books::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;            /* reuse same background */
+  background-position: center;
+  background-size: cover;
+  transform-origin: left center;  /* default origin (will be adjusted per side) */
+  transition: transform 0.9s cubic-bezier(.2,.9,.3,1), opacity 0.9s ease;
+  pointer-events: none;
+  z-index: 1; /* sits under the text (which should be z-index:2 in your existing CSS) */
+  opacity: 0; /* hidden by default */
+}
+
+/* For left side (new-books) we pivot from left to give a left-turn illusion */
+.new-books::after {
+  transform-origin: left center;
+}
+
+/* For right side (old-books) pivot from right to give a right-turn illusion */
+.old-books::after {
+  transform-origin: right center;
+}
+
+/* On hover we animate the overlay to rotate and fade to emulate page-turn */
+.new-books:hover::after {
+  transform: perspective(800px) rotateY(-55deg) translateX(-8%);
+  opacity: 0.95;
+}
+
+.old-books:hover::after {
+  transform: perspective(800px) rotateY(55deg) translateX(8%);
+  opacity: 0.95;
+}
+
+/* Ensure your headings/text remain above the overlay */
+.new-books h2,
+.old-books h2 {
+  position: relative;
+  z-index: 2;
+}
+.new-books, .old-books { position: relative; }
+/* ---------- FEATURED BOOKS SECTION ---------- */
+.featured-section {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 40px 0 10px;
+  border-top: 1px solid #ddd;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons a {
+  color: #555;
+  margin: 0 8px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #000;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 13px;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+}
+/* Footer must be position:relative so the animation can be positioned inside it */
+.footer {
+  position: relative;
+  /* keep your existing footer rules — this only ensures positioning works */
+}
+

@@ -30,25 +30,49 @@
     </div>
 
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Buy</a></li>
-      <li><a href="#">Sell</a></li>
-      <li><a href="#">Categories</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="/HTML/Index.html">Home</a></li>
+      <li><a href="/HTML/Sell.html">Sell</a></li>
+      <li><a href="/HTML/Categories.html">Categories</a></li>
+      <li><a href="/HTML/About.html">About</a></li>
+      <li><a href="/HTML/Contact.html">Contact</a></li>
     </ul>
 
     <div class="profile">
       <i class="fas fa-user-circle"></i>
     </div>
   </nav>
-  
-  <!-- 🔹 NEW & OLD BOOKS SECTION -->
-<div class="books-bar">
-  <div class="books-section new-books">New Books</div>
-  <div class="books-section old-books">Old Books</div>
-</div>
 
+ <!-- 🔹 NEW & OLD BOOKS SECTION -->
+<section class="books-section">
+  <div class="new-books" onclick="window.location.href='Newbooks.html'">
+    <h2>New Books</h2>
+  </div>
+  <div class="old-books" onclick="window.location.href='Oldbooks.html'">
+    <h2>Old Books</h2>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h2>BookMart</h2>
+      <p>Buy New. Sell Old. Read Smart.</p>
+      <p class="copyright">© 2025 BookMart. All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-right">
+      <h3>Connect with Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p>Phone: +91 98765 43210</p>
+      <p class="footer-email">📧 support@bookmart.com</p>
+    </div>
+  </div>
+</footer>
 
   <script src="/JAVASCRIPT/Index.js"></script>
 </body>
