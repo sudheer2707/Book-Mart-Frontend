@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Cart - BookMart</title>
+  <link rel="stylesheet" href="/CSS/Cart.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- 🔹 NAVBAR -->
+  <nav class="navbar glass">
+    <div class="logo-container">
+      <img src="/IMAGES/Bookmart logo.png" alt="BookMart Logo" class="logo" />
+      <h1 class="logo-text">BookMart</h1>
+    </div>
+
+    <a href="/HTML/Index.html" class="home-icon">
+      <i class="fas fa-home"></i>
+    </a>
+  </nav>
+
+  <!-- 🔹 CART SECTION -->
+  <section class="cart-container">
+    <div class="cart-box glass">
+      <h2><i class="fas fa-shopping-cart"></i> My Cart</h2>
+
+      <div id="cart-items">
+      </div>
+
+      <div class="cart-footer">
+        <h3>Total: ₹<span id="total-price">0</span></h3>
+        <button id="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="/JAVASCRIPT/Cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,388 @@
+/* ===============================
+   🌙 BOOKMART CHECKOUT PAGE STYLE
+   Glassmorphism + Cool Blue Theme
+================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, rgba(30, 64, 94, 0.4), rgba(2, 48, 71, 0.6)),
+              url('/IMAGES/background.jpg') no-repeat center center/cover;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e0f2f1;
+}
+
+/* 🔹 Glass Container */
+.checkout-container {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkout-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* 🔹 Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #e3f2fd;
+}
+
+.home-icon {
+  font-size: 22px;
+  color: #90e0ef;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.home-icon:hover {
+  color: #48cae4;
+}
+
+/* 🔹 Section Headings */
+h3 {
+  color: #8ecae6;
+  font-weight: 600;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 5px;
+}
+
+/* 🔹 Order Summary */
+.order-summary {
+  margin-top: 20px;
+}
+
+.book-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.book-details img {
+  width: 70px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+#book-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #e3f2fd;
+}
+
+#book-price {
+  font-size: 15px;
+  color: #90e0ef;
+  margin-top: 5px;
+}
+
+/* 🔹 Payment Options */
+.payment-section {
+  margin-top: 25px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.payment-option input {
+  accent-color: #0882ba;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.payment-box {
+  margin-left: 25px;
+  margin-top: 5px;
+}
+
+.payment-box input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #e0f7fa;
+  transition: background 0.3s ease;
+}
+
+.payment-box input:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.hidden {
+  display: none;
+}
+
+/* 🔹 Promo Section */
+.promo-section {
+  margin-top: 25px;
+}
+
+.promo-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.promo-container input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #e3f2fd;
+}
+
+.promo-container input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.promo-container button {
+  background: linear-gradient(135deg, #219ebc, #023047);
+  border: none;
+  border-radius: 10px;
+  padding: 8px 15px;
+  color: #e3f2fd;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.promo-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 12px rgba(144, 224, 239, 0.5);
+}
+
+/* 🔹 Promo message */
+#promo-message {
+  font-size: 13px;
+  margin-top: 8px;
+  color: #a9def9;
+}
+
+/* 🔹 Confirm Button */
+.confirm-btn {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 17px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #8ecae6, #219ebc);
+  color: #012a4a;
+  transition: all 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background: linear-gradient(135deg, #48cae4, #0096c7);
+  color: #001219;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(144, 224, 239, 0.5);
+}
+
+/* Smooth fade animation */
+.checkout-container,
+.payment-box input,
+.promo-container input {
+  transition: all 0.4s ease;
+}
+/* --- Header Icons --- */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.home-icon, .cart-icon {
+  font-size: 22px;
+  color: #90e0ef;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.home-icon:hover, .cart-icon:hover {
+  color: #48cae4;
+  transform: scale(1.1);
+}
+/* Ensure checkout box contents stay inside nicely */
+.book-details {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 10px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-y: auto; /* allows scroll if many items */
+  word-wrap: break-word;
+}
+
+/* Each book item box */
+.checkout-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.checkout-container {
+  overflow-y: auto;
+  max-height: 80vh;
+}
+/* 🌫️ Glassmorphism Box for Payment Section */
+.glass-box {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 25px;
+  margin-top: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  overflow: hidden; /* ✅ keeps inputs inside the box */
+}
+
+/* 🏷️ Section Title */
+.section-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* 💳 Payment Option Style */
+.payment-option {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.payment-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e9f3ff;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.payment-label input[type="radio"] {
+  accent-color: #00bfff;
+  transform: scale(1.2);
+}
+
+/* ✨ Input Containers */
+.upi-input,
+.card-input {
+  margin-top: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box; /* ✅ ensures padding stays inside */
+}
+
+/* ✨ Input fields */
+.payment-option input[type="text"],
+.payment-option input[type="month"],
+.payment-option input[type="password"] {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 8px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  box-sizing: border-box;
+}
+
+.payment-option input[type="text"]:focus,
+.payment-option input[type="month"]:focus,
+.payment-option input[type="password"]:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+/* 📏 Card Row for expiry & CVV */
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.card-field {
+  flex: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 🎞️ Smooth Fade-In for Payment Fields */
+.fade-box {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

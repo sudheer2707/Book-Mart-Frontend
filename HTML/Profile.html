@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile - BookMart</title>
+  <link rel="stylesheet" href="/CSS/Profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+ <!-- 🔹 NAVBAR -->
+<nav class="navbar glass">
+  <div class="logo-container">
+    <img src="/IMAGES/Bookmart logo.png" alt="BookMart Logo" class="logo-img" />
+  </div>
+  <a href="/HTML/Index.html" class="exit-btn">
+    <i class="fas fa-sign-out-alt"></i> Exit
+  </a>
+</nav>
+
+  <!-- 🔹 PROFILE LAYOUT -->
+  <section class="profile-layout">
+    
+    <!-- 🔸 LEFT SIDEBAR -->
+    <aside class="sidebar glass">
+      <div class="user-section">
+        <img id="profile-img" src="/IMAGES/pp.jpeg" alt="User Image" class="user-img" />
+        <h2 id="user-name">John Doe</h2>
+        <input type="file" id="upload-img" accept="image/*" hidden>
+        <button id="change-pic-btn">Change Picture</button>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="active" data-section="orders"><i class="fas fa-box"></i> My Orders</li>
+        <li data-section="sold"><i class="fas fa-book"></i> Sold Books</li>
+        <li data-section="settings"><i class="fas fa-user-cog"></i> Account Settings</li>
+      </ul>
+    </aside>
+
+    <!-- 🔸 RIGHT CONTENT AREA -->
+    <main class="profile-details glass" id="profile-content">
+      <!-- Content will be injected by JS -->
+    </main>
+  </section>
+
+  <script src="/JAVASCRIPT/Profile.js"></script>
+</body>
+</html>

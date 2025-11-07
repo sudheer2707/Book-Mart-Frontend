@@ -191,3 +191,32 @@ body {
   font-weight: 500;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
+.cart-icon {
+  position: relative;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 22px;
+  color:black;
+  transition: transform 0.3s;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+}
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #ff4b5c;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

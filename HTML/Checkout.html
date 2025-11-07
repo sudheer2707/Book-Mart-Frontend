@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | BookMart</title>
+  <link rel="stylesheet" href="/CSS/checkout.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="checkout-container">
+    <header>
+      <div class="header-icons">
+        <a href="/HTML/Index.html" class="home-icon" title="Back to Home">
+          <i class="fas fa-home"></i>
+        </a>
+        <a href="/HTML/Cart.html" class="cart-icon" title="View Cart">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </div>
+      <h2>Checkout</h2>
+    </header>
+
+    <section class="order-summary">
+      <h3>Order Summary</h3>
+      <div class="book-details">
+        <img id="book-image" src="" alt="Book Image">
+        <div>
+          <h4 id="book-title">Book Title</h4>
+          <p id="book-price">₹0</p>
+        </div>
+      </div>
+    </section>
+
+  <section class="payment-section glass-box">
+  <h2 class="section-title">💳 Payment Method</h2>
+
+  <!-- 🔹 Cash on Delivery -->
+  <div class="payment-option">
+    <label class="payment-label">
+      <input type="radio" name="payment" id="cod" />
+      <span class="payment-text">Cash on Delivery</span>
+    </label>
+  </div>
+
+  <!-- 🔹 UPI -->
+  <div class="payment-option">
+    <label class="payment-label">
+      <input type="radio" name="payment" id="upi" />
+      <span class="payment-text">UPI</span>
+    </label>
+    <div class="upi-input hidden fade-box">
+      <label for="upi-id">Enter your UPI ID</label>
+      <input type="text" id="upi-id" placeholder="example@upi" />
+    </div>
+  </div>
+
+  <!-- 🔹 Card -->
+  <div class="payment-option">
+    <label class="payment-label">
+      <input type="radio" name="payment" id="card" />
+      <span class="payment-text">Credit / Debit Card</span>
+    </label>
+
+    <div class="card-input hidden fade-box">
+      <label for="card-number">Card Number</label>
+      <input type="text" id="card-number" maxlength="16" placeholder="•••• •••• •••• ••••" />
+
+      <div class="card-row">
+        <div class="card-field">
+          <label for="expiry">Expiry</label>
+          <input type="month" id="expiry" />
+        </div>
+
+        <div class="card-field">
+          <label for="cvv">CVV</label>
+          <input type="password" id="cvv" maxlength="3" placeholder="•••" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="promo-section">
+      <h3>Have a Promo Code?</h3>
+      <div class="promo-container">
+        <input type="text" id="promo-code" placeholder="Enter promo code">
+        <button id="apply-promo">Apply</button>
+      </div>
+      <p id="promo-message"></p>
+    </section>
+
+    <button class="confirm-btn" id="confirm-order">Confirm & Pay</button>
+  </div>
+
+  <script src="/JAVASCRIPT/checkout.js"></script>
+</body>
+</html>
